@@ -980,7 +980,7 @@ pt-BR:
     product_properties: Propriedades do Produto
     product_rule:
       choose_products: Escolher Produtos
-      label:
+      label: Pedido deve conter
       match_all: Todos
       match_any: Pelo Menos Um
       match_none: Nenhum
@@ -990,25 +990,39 @@ pt-BR:
     products: Produtos
     promotion: Promoção
     promotion_action: Ação de Promoção
+
     promotion_action_types:
       create_adjustment:
-        description: Criar um ajuste de crédito promocional no pedido
-        name: Nome
-      create_item_adjustments:
-        description: Descrição
-        name: Nome
+        name: Criar ajuste
+
       create_line_items:
-        description: Preencher o carrinho com a quantidade especificada de variantes
-        name: Criar Itens
+        name: Criar itens
+
+      create_item_adjustments:
+        name: Criar um ajuste em um item no pedido
+        description: Adiciona um ajuste promocional em um item do pedido
+
       free_shipping:
-        description:
-        name:
+        name: Envio grátis
+        description: Adiciona envio grátis ao pedido
+
+      create_related_item_adjustments:
+        name: Criar desconto incremental
+        description: Adiciona desconto baseado em itens relacionados no pedido
+
+    incremental_percent_per_unique_item: Desconto incremental
+
+    first_item_discount: Desconto em um item
+    second_item_discount: Desconto em dois itens
+    other_items_discount: Desconto em três ou mais itens
+
     promotion_actions: Ações das Promoções
     promotion_form:
       match_policies:
         all: Combinar todas regras
         any: Combinar algumas regras
     promotion_rule: Regras da Promoção
+
     promotion_rule_types:
       first_order:
         description: Deve ser o primeiro pedido do usuário
@@ -1020,23 +1034,30 @@ pt-BR:
         description: O cliente deve visitar a página especificada
         name: Página de Destino
       one_use_per_user:
-        description:
-        name:
+        name: Um uso por usuário
+        description: O usuário poderá usar somente uma vez essa promoção
       option_value:
-        description:
-        name:
+        description: Pedido incluí produto(s) específicos com tipo de opção correspondentes
+        name: Tipo de opção
       product:
         description: Pedido inclui produto(s) específico(s)
         name: Produto(s)
-      taxon:
-        description:
-        name:
       user:
         description: Disponível apenas para usuários específicos
         name: Usuários
       user_logged_in:
         description: Disponível apenas para usuários logados
         name: Usuário Logado
+      payment_method_rule:
+        name: Promoção por método de pagamento
+        description: Ativa a promoção dependendo do método de pagamento escolhido
+      account_type_rule:
+        name: Conta do usuário
+        description: "Ativa a promoção dependendo do tipo de conta do usuário (PF ou PJ)"
+      taxon:
+        name: Pedido incluí produto(s) com categoria(s) correspondente(s)
+        description: Categoria(s)
+
     promotion_uses:
     promotionable: Em promoção
     promotions: Promoções
@@ -1275,10 +1296,11 @@ pt-BR:
     taxon_edit: Editar categoria
     taxon_placeholder: Adicionar uma árvore de categorias
     taxon_rule:
-      choose_taxons:
-      label:
-      match_all:
-      match_any:
+      choose_taxons: Escolha as Categorias
+      label: Categoria(s)
+      match_all: Conter todas
+      match_any: Conter pelo menos uma
+
     taxonomies: Categorias
     taxonomy: Categoria
     taxonomy_edit: Editar Categoria
